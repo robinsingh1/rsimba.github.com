@@ -1,0 +1,20 @@
+/**StyleSheet **/
+
+#first_letter
+{
+width:900px;
+margin-right:auto;
+margin-left:auto;
+display:inline-block;
+color:#a09d9b; 
+font-family: 'Ubuntu', sans-serif;
+}
+
+#rest
+{
+width:90px;
+display:inline-block;
+color:#f99a00;
+font-family: 'Ubuntu', sans-serif;
+}
+
