@@ -33,9 +33,17 @@ margin-bottom:-100px;
 }
 #body
 {
-	width:120px;	
+	width:180px;	
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:-15px;
+}
+#quotes-title
+{
+	color:#888888;
+}
+#quote
+{
+	color:#99CCD1;
 }
