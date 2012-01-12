@@ -2,19 +2,40 @@
 
 #first_letter
 {
-width:900px;
-margin-right:auto;
-margin-left:auto;
+
+margin-right: 0px;
+/*margin-left:auto;*/
 display:inline-block;
 color:#a09d9b; 
-font-family: 'Ubuntu', sans-serif;
+font-family: 'Droid Serif', Georgia, Times, serif;
+font-size: 49px;
+line-height: 65px;
+margin-bottom:-100px;
+/*color:#5C4F66;*/
 }
 
 #rest
 {
-width:90px;
 display:inline-block;
 color:#f99a00;
 font-family: 'Ubuntu', sans-serif;
+font-size: 28px;
 }
+#content
+{
+width:200px;
+display:block;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:-100px;
 
+
+}
+#body
+{
+	width:120px;	
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:-15px;
+}
