@@ -1,19 +1,78 @@
-<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet' type='text/css'>
 <link href="layout.css" type="text/css" rel='stylesheet'>
-<link href='http://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Stoke' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <body style="background-color:#fff;">
-<script type="text/javascript">
-	$('#first_click').click(function () {
-	$('#about').css('display', 'block');
-	});
+<script>
+	function show(id)
+	{
+	if (id == 1)
+	{
+	$('#projects').hide();
+	$('#icons').hide();
+	$('#about-content').show();
+	$('#aboutref').css('color', '#86B4B8');
+	} else if (id ==2) {
+	$('#projects').show();
+	$('#icons').hide();
+	$('#about-content').hide();
+	$('#workref').css('color', '#E07871');
+	} else if (id == 3) {
+	$('#projects').hide();
+	$('#about-content').hide();
+	$('#icons').show();
+	$('#contactref').css('color', '#686171');
+	}
+	}
+	function over(id)
+	{
+		if (id == 1)
+		{
+		$('#aboutref').css('color', '#86B4B8');
+		} else if (id == 3) {
+		$('#contactref').css('color', '#E07871');
+		} else if (id == 2) {
+		$('#workref').css('color', '#686171');
+		} else {
+		
+		}
+	}
+
+
+	function out(id)
+	{
+		if(id==1)
+		{
+		$('#aboutref').css('color', '#DBD7D2');
+ 		} else if(id ==3) {
+		$('#contactref').css('color', '#DBD7D2');
+ 		} else if(id == 2){
+		$('#workref').css('color', '#DBD7D2');
+		} else {
+		
+		}
+	}
+	function proj_over(id)
+	{
+		if (id==1){
+		$('#ul1').show();
+		} else if (id==2){
+		$('#ul2').show();
+		} else if (id==3){
+		$('#ul3').show();
+		}
+	}
+function proj_out(id)
+{
+     if (id==1){
+     $('#ul1').hide();
+     } else if (id==2){
+     $('#ul2').hide();
+     } else if (id==3){
+     $('#ul3').hide();
+    }
+ }
 </script>
-<div id="border">
 <div id="content" style="width:400px;background-color:#fff;">
 
 	<div style="display:block;margin-left:auto;margin-right:auto;width:900px;" id="name">
@@ -26,8 +85,9 @@
   		<div style="height:10px;width:450px;background-color:#136482;">
  			</div>
 		</div>
-		<div style="width:800px;display:block;margin-right:auto;margin-left:auto;">
-		<a href="" onclick="show(1);" id="first_click" style="text-decoration:none;"class="menu"> About | </a><a href="" onclick="show(2);" style="text-decoration:none;"class="menu"> Work </a><a href="" onclick="show(3);"style="text-decoration:none;"class="menu"> | Contact</a>
+		<div style="width:800px;display:block;margin-right:auto;margin-left:auto;" id="the_menu">
+		<span></span>
+		<a href="#" onclick="show(1);" id="aboutref" onmouseover="over(1)" onmouseout="out(1)" style="text-decoration:none; color:#86B4B8;"class="menu"> About | </a><a href="#" onclick="show(2)" onmouseover="over(2)" onmouseout="out(2)" id="workref" style="text-decoration:none;"class="menu"> Work </a><a href="#"onmouseover="over(3)" onmouseout="out(3)" onclick="show(3);"style="text-decoration:none;" id="contactref" class="menu"> | Contact </a>
 				<div id="about1" style="display:none;">
 					<h1>ooo</h1>
 				</div>
@@ -37,7 +97,7 @@
 	<div id="about" style="display:none;">
 		<center><p id="body">Hustler.</p></center>
 		<center><p id="body">Hacker.</p></center>
-		<center><p id="body">I take brain dumps <a href="http://rrsingh.posterous.com" id="link" >here</a></p></center>
+		<center><p id="body">I take brain dumps<a href="http://www.rrsingh.posterous.com" style="margin-left:20px;" id="link" >here</a></p></center>
 	<br />
 	</div>
 
@@ -47,25 +107,63 @@
 	<p style="margin-left:120px;color:#888888;"> - Will Smith</p>
 	<p id="quote"> "The only thing that I know is that I know nothing"</p>
 	<p style="margin-left:120px;color:#888888;" > - Socrates</p>
-	</div>
-	<div id="icons" style="margin-top:150px;display:block;">
+</div>
+<div style="width:300px;display:block; margin-top:150px;margin-left:auto;margin-right:auto;"id="about-content">
+	<p class="menu" style="font-size:20px;color:#000;">Hustler.</p>
+	<p class="menu" style="font-size:20px;color:#000;">Hacker.</p>
+	<p class="menu" style="font-size:20px;color:#000;">I take brain dumps &nbsp;<a class="menu" style="margin-left:0px;font-size:20px;color:#000;"href="http://rrsingh.posterous.com">here</a></p>
+</div>
+<div id="projects" style="width:600px;display:block;margin-left:auto;margin-right:auto;margin-bottom:-90px;margin-top:150px;display:none;">
+ <table >
+   <tr >
+   <th ><img id="splabs" onmouseover="proj_over(1)" onmouseout="proj_out(1)" style="border-bottom:2px solid #FFF;height:50px;" src="splabs.png" /></th>
+		<th><img id="medalert" onmouseover="proj_over(2)" onmouseout="proj_out(2)" style="border-bottom:2px solid #FFF;margin-left:30px; margin-right:30px; margin-bottom:8px;height:50px; "src="medalert.png" /></th>
+  <th><img  id="hack"onmouseover="proj_over(3)" onmouseout="proj_out(3)" style="border-bottom:2px solid #FFF;height:50px;" src="logo.png" /></th>
+   </tr>
+	<tr>
+		<th style="height:5px;"><img id="ul1" style="display:none; height:5px; width:100% "src="color.png"></th>
+		<th style="height:5px;"><img id="ul2" style="display:none; height:5px; width:70% "src="color.png"></th>
+		<th style="height:5px;"><img id="ul3" style="display:none; height:5px; width:100% "src="color.png"></th>
+	</tr>
+ </table>
+</div>
+ </div>
+	<div id="icons" style="margin-top:150px;display:none;">
 		<center><table>
 			<tr>
-			<th><a href="http://delicious.com/rsimba"><img src="../social_networking_iconpack/delicious_32.png" /></a></th>
-			<th><a href="http://www.facebook.com/profile.php?id=1651320306"><img src="../social_networking_iconpack/facebook_32.png" /></a></th>
-			<th><a href="http://twitter.com/ysimba"><img src="../social_networking_iconpack/twitter_32.png" /></a></th>
-			<th><a href="http://www.linkedin.com/profile/view?id=52644037&locale=en_US&trk=tab_pro"><img src="../social_networking_iconpack/linkedin_32.png" /></a></th>
+			<th><a href="http://delicious.com/rsimba"><img src="social_networking_iconpack/delicious_32.png" /></a></th>
+			<th><a href="http://www.facebook.com/profile.php?id=1651320306"><img src="social_networking_iconpack/facebook_32.png" /></a></th>
+			<th><a href="http://twitter.com/ysimba"><img src="social_networking_iconpack/twitter_32.png" /></a></th>
+			<th><a href="http://www.linkedin.com/profile/view?id=52644037&locale=en_US&trk=tab_pro"><img src="social_networking_iconpack/linkedin_32.png" /></a></th>
 			<!-- <th><a href="http://delicious.com/rsimba"><img src="../social_networking_iconpack/forrst_32.png" /></th> -->
 			<!-- <th><a href="http://delicious.com/rsimba"><img src="../social_networking_iconpack/skype_32.png" /></th> -->
-			<th><a href="http://github.com/rsimba"><img src="/github-icon.png" style="height:44px;width:44px;"/></a></th>
+			<th><a href="http://github.com/rsimba"><img src="github-icon.png" style="height:44px;width:44px;"/></a></th>
 			</tr>
 		</table></center>
 
 	</div>
+
 </div>
 </div>
+<script>
+
+//	function test()
+//	{
+//		 $('#projects').show();
+//		//alert('yo');
+//	}
+</script>
+
+<div id="projects" style="display:none;">
+<center>
+<table >
+	<th>
+	<tr style=""><img style="height:15%;" src="splabs.png" /></tr>
+	<tr style=""><img style="margin-left:30px; margin-right:30px; margin-bottom:8px;height:15%; "src="medalert.png" /></tr>
+	<tr style=""><img style="height:15%;" src="logo.png" /></tr>
+	</th>
+</table>
+</center>
 </div>
-<div id="about" style="display:none;">
-<h1>OHHHH</h1>
 </div>
 </body>
