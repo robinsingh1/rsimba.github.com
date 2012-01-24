@@ -55,21 +55,22 @@
 	function proj_over(id)
 	{
 		if (id==1){
-		$('#ul1').show();
+		$('#ul1').css('color','#8B8B8B');
 		} else if (id==2){
-		$('#ul2').show();
+		$('#ul2').css('color', '#8B8B8B');
 		} else if (id==3){
-		$('#ul3').show();
+		$('#ul3').css('color', '#8B8B8B');
 		}
 	}
+	
 function proj_out(id)
 {
      if (id==1){
-     $('#ul1').hide();
+     $('#ul1').css('color', '#fff');
      } else if (id==2){
-     $('#ul2').hide();
+     $('#ul2').css('color', '#fff');
      } else if (id==3){
-     $('#ul3').hide();
+     $('#ul3').css('color', '#fff');
     }
  }
 </script>
@@ -87,43 +88,45 @@ function proj_out(id)
 		</div>
 		<div style="width:800px;display:block;margin-right:auto;margin-left:auto;" id="the_menu">
 		<span></span>
-		<a href="#" onclick="show(1);" id="aboutref" onmouseover="over(1)" onmouseout="out(1)" style="text-decoration:none; color:#86B4B8;"class="menu"> About | </a><a href="#" onclick="show(2)" onmouseover="over(2)" onmouseout="out(2)" id="workref" style="text-decoration:none;"class="menu"> Work </a><a href="#"onmouseover="over(3)" onmouseout="out(3)" onclick="show(3);"style="text-decoration:none;" id="contactref" class="menu"> | Contact </a>
+		<a href="#" onclick="show(1);" id="aboutref" onmouseover="over(1)" onmouseout="out(1)" style="text-decoration:none; color:#86B4B8;"class="menu"> About | </a><a href="#" onclick="show(2)" onmouseover="over(2)" onmouseout="out(2)" id="workref" style="text-decoration:none;"class="menu"> Projects </a><a href="#"onmouseover="over(3)" onmouseout="out(3)" onclick="show(3);"style="text-decoration:none;" id="contactref" class="menu"> | Contact </a>
 				<div id="about1" style="display:none;">
 					<h1>ooo</h1>
 				</div>
 		</div>
 	</div>
 </div>
-	<div id="about" style="display:none;">
-		<center><p id="body">Hustler.</p></center>
-		<center><p id="body">Hacker.</p></center>
-		<center><p id="body">I take brain dumps<a href="http://www.rrsingh.posterous.com" style="margin-left:20px;" id="link" >here</a></p></center>
-	<br />
-	</div>
-
-	<div id="quote-span" style="display:none;">
+<div style="width:300px;display:block; margin-top:150px;margin-left:auto;margin-right:auto;"id="about-content">
+	<center><p class="menu" style="font-size:20px;color:#000;">Hustler.</p></center>
+	<center><p class="menu" style="margin-top:-10px;font-size:20px;color:#000;">Hacker.</p></center>
+	<!-- <center><p class="menu" style="margin-top:-10px;font-size:20px;color:#000;">I take brain dumps &nbsp;<a class="menu" style="margin-left:0px;font-size:20px;color:#000;"href="http://rrsingh.posterous.com">here</a></p></center>-->
 	<p id="quotes-title">Quotes I Live By</p>
 	<p id="quote">"The only thing that I see that is distinctly different about me is I'm not afraid to die on a treadmill. I will not be out-worked, period."</p>
 	<p style="margin-left:120px;color:#888888;"> - Will Smith</p>
 	<p id="quote"> "The only thing that I know is that I know nothing"</p>
 	<p style="margin-left:120px;color:#888888;" > - Socrates</p>
 </div>
-<div style="width:300px;display:block; margin-top:150px;margin-left:auto;margin-right:auto;"id="about-content">
-	<p class="menu" style="font-size:20px;color:#000;">Hustler.</p>
-	<p class="menu" style="font-size:20px;color:#000;">Hacker.</p>
-	<p class="menu" style="font-size:20px;color:#000;">I take brain dumps &nbsp;<a class="menu" style="margin-left:0px;font-size:20px;color:#000;"href="http://rrsingh.posterous.com">here</a></p>
-</div>
 <div id="projects" style="width:600px;display:block;margin-left:auto;margin-right:auto;margin-bottom:-90px;margin-top:150px;display:none;">
  <table >
    <tr >
    <th ><img id="splabs" onmouseover="proj_over(1)" onmouseout="proj_out(1)" style="border-bottom:2px solid #FFF;height:50px;" src="splabs.png" /></th>
-		<th><img id="medalert" onmouseover="proj_over(2)" onmouseout="proj_out(2)" style="border-bottom:2px solid #FFF;margin-left:30px; margin-right:30px; margin-bottom:8px;height:50px; "src="medalert.png" /></th>
-  <th><img  id="hack"onmouseover="proj_over(3)" onmouseout="proj_out(3)" style="border-bottom:2px solid #FFF;height:50px;" src="logo.png" /></th>
+		<th><img id="medalert" onmouseover="proj_over(2)" onmouseout="proj_out(2)" style="border-bottom:2px solid #FFF;margin-left:40px; margin-right:30px; margin-bottom:8px;height:50px; "src="medalert.png" /></th>
+  <th><img  id="hack"onmouseover="proj_over(3)" onmouseout="proj_out(3)" style="margin-left:10px;border-bottom:2px solid #FFF;height:50px;" src="logo.png" /></th>
    </tr>
+	
 	<tr>
-		<th style="height:5px;"><img id="ul1" style="display:none; height:5px; width:100% "src="color.png"></th>
-		<th style="height:5px;"><img id="ul2" style="display:none; height:5px; width:70% "src="color.png"></th>
-		<th style="height:5px;"><img id="ul3" style="display:none; height:5px; width:100% "src="color.png"></th>
+		<th style="height:5px;"><img id="u1" style="margin-top:-20px; margin-left:15px; display:block;  width:80% "src="menu.gif"></th>
+		<th style="height:5px;"><img id="u2" style="margin-top:-20px; margin-left:30px; display:block;  width:70% "src="menu.gif"></th>
+		<th style="height:5px;"><img id="u3" style="margin-top:-20px; display:block;  width:100% "src="menu.gif"></th>
+	</tr>
+	<tr>
+		<th style="height:5px;"><img id="l1" style="display:none; height:5px; width:100% "src="color.png"></th>
+		<th style="height:5px;"><img id="l2" style="display:none; height:5px; width:70% "src="color.png"></th>
+		<th style="height:5px;"><img id="l3" style="display:none; height:5px; width:100% "src="color.png"></th>
+	</tr>
+	<tr>
+		<th><p id="ul1" style="color:#FFF;text-align:right; margin-top:-70px; margin-left:-70px; margin-right:30px;"> Sparkplugs lab is an initiative which brings able developers free-lance and development work.  My co-founders and I have grown it substantially over the last year bringing in over $13 000 sales. Working with a team of 5 - 6 developers and designers. Being a co-founder I recruit devs, sell to potential clients, project manage internally and make sure the code we ship is of high quality.</p> </th>
+		<th><p id="ul2" style="color:#FFF;margin-top:-10px;"> MedAlert messenger is an initiative that I also co-founded which brings together primarily computer science and technical savvy folks to try and bring innovation into the healthcare industry through Mobile Health technologies.  The team consists of computer science majors, Ph.D's and professors.  Because McMaster University is renowned for its practice of medicine, we are able to test and iterate our products by working tightly with nearby hospitals.</p></th>
+		<th><p id="ul3" style="color:#FFF;margin-left: 20px; margin-right: -90px; text-align: left;"> I was lucky enough to be invited to Facebook Canada's Head Office for an all-night hackathon and the very first Hack For a Cause event. Hacking with FB engineers and other incredibly smart and talented engineers for a good cause, was an incredibly rewarding experience.  I've stayed in touch with many of those people and we are relaunching our Hackathon product in the next week! Follow me on twitter for more info. </p></th>
 	</tr>
  </table>
 </div>
@@ -138,6 +141,7 @@ function proj_out(id)
 			<!-- <th><a href="http://delicious.com/rsimba"><img src="../social_networking_iconpack/forrst_32.png" /></th> -->
 			<!-- <th><a href="http://delicious.com/rsimba"><img src="../social_networking_iconpack/skype_32.png" /></th> -->
 			<th><a href="http://github.com/rsimba"><img src="github-icon.png" style="height:44px;width:44px;"/></a></th>
+			<th><a href="robin.singh.1991@gmail.com"><img src="Gmail-Icon.png" style="height:34px;"></a></th>
 			</tr>
 		</table></center>
 
